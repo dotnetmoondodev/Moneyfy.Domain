@@ -12,6 +12,6 @@ public abstract record BaseEntity: IBaseEntity
     {
         Id = Guid.NewGuid();
         Description = description;
-        CreationDate = DateTimeOffset.UtcNow;
+        CreationDate = DateTime.Now;
     }
 }
