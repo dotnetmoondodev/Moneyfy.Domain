@@ -5,7 +5,7 @@ namespace Domain.Payments;
 public sealed record Payment: ValueEntity
 {
     public Currency Currency { get; private set; }
-    public bool IsAutoDebit { get; private set; }
+    public CustomAnswer IsAutoDebit { get; private set; }
     public string? PaymentMediaReference { get; private set; }
 
     private Payment() { }
@@ -27,7 +27,7 @@ public sealed record Payment: ValueEntity
         string description,
         decimal value,
         Currency currency,
-        bool isAutoDebit,
+        CustomAnswer isAutoDebit,
         string? paymentMediaReference )
         : base( description, value )
     {
@@ -52,7 +52,7 @@ public sealed record Payment: ValueEntity
         string description,
         decimal value,
         Currency currency,
-        bool isAutoDebit,
+        CustomAnswer isAutoDebit,
         string? paymentMediaReference )
     {
         Description = description;
