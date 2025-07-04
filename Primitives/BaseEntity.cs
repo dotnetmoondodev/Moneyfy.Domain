@@ -6,7 +6,7 @@ public abstract record BaseEntity: IBaseEntity
     public string? Description { get; protected set; }
     public DateTime CreationDate { get; protected set; }
 
-    protected BaseEntity() { }
+    internal BaseEntity() { }
 
     protected BaseEntity( string description )
     {

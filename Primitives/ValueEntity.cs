@@ -4,7 +4,7 @@ public abstract record ValueEntity: BaseEntity
 {
     public decimal Value { get; protected set; }
 
-    protected ValueEntity() { }
+    internal ValueEntity() { }
 
     protected ValueEntity(
         string description,
