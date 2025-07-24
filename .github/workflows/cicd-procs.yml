@@ -8,6 +8,10 @@ jobs:
   generate-version:
     runs-on: ubuntu-latest
 
+    permissions:
+        id-token: write
+        contents: write
+  
     steps:
     - uses: actions/checkout@v4
     
@@ -23,10 +27,13 @@ jobs:
       new_version: ${{ steps.tab_bump.outputs.new_tag }}
 
   package-and-publish-contracts:
-
     runs-on: ubuntu-latest
     needs: generate-version
 
+    permissions:
+        id-token: write
+        contents: write
+  
     steps:
     - uses: actions/checkout@v4
     
