@@ -1,8 +1,10 @@
+using System.Diagnostics;
 using Domain.Payments;
 using Domain.Primitives;
 
 namespace Domain.Notifications;
 
+[DebuggerDisplay( "Notification {Id}: {Description} - {DateToSend}" )]
 public sealed record Notification: BaseEntity
 {
     public DateTime DateToSend { get; private set; }

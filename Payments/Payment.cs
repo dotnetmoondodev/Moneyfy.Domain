@@ -1,7 +1,9 @@
+using System.Diagnostics;
 using Domain.Primitives;
 
 namespace Domain.Payments;
 
+[DebuggerDisplay( "Payment {Id}: {Description} - {Value}" )]
 public sealed record Payment: ValueEntity
 {
     public Currency Currency { get; private set; }

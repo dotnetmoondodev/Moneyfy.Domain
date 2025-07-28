@@ -1,7 +1,9 @@
+using System.Diagnostics;
 using Domain.Primitives;
 
 namespace Domain.Expenses;
 
+[DebuggerDisplay( "Expense {Id}: {Description} - {Value}" )]
 public sealed record Expense: ValueEntity
 {
     private Expense() { }

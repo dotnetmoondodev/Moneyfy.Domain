@@ -1,7 +1,9 @@
+using System.Diagnostics;
 using Domain.Primitives;
 
 namespace Domain.Incomes;
 
+[DebuggerDisplay( "Income {Id}: {Description} - {Value}" )]
 public sealed record Income: ValueEntity
 {
     public string? Source { get; private set; }
