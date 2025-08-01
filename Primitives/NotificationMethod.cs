@@ -1,6 +1,6 @@
 namespace Domain.Primitives;
 
-public enum NotificationMethod: byte
+public enum NotificationMethod: int
 {
     Email = 1,
     Sms = 2,

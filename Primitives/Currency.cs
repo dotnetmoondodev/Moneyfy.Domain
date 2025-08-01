@@ -2,7 +2,7 @@ using System.ComponentModel;
 
 namespace Domain.Primitives;
 
-public enum Currency: byte
+public enum Currency: int
 {
     [Description( "USD - United States Dollar" )]
     USD = 1, // United States Dollar

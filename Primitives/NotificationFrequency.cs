@@ -1,6 +1,6 @@
 namespace Domain.Primitives;
 
-public enum NotificationFrequency: byte
+public enum NotificationFrequency: int
 {
     Daily = 1,
     Weekly = 2,
